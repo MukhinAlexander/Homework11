@@ -25,21 +25,21 @@ public class Main {
         } else if (checkClientOS == 0 && productionDate >= clientDeviceYear) {
             System.out.println("Установите версию приложения для iOS по ссылке \n");
         } else if (checkClientOS == 0 && productionDate < clientDeviceYear) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке \n");
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке \n");
         }
     }
 
     // method of case №3
 
-    public static void checkDelivery(int Distance){
+    public static void checkDelivery(int distance){
         int deliveryTime = 0;
-        if (Distance < 20) {
+        if (distance < 20) {
             deliveryTime += 1;
             System.out.println("Потребуется дней: " + deliveryTime + "\n");
-        } else if (Distance >= 20 && Distance < 60) {
+        } else if (distance < 60) {
             deliveryTime += 2;
             System.out.println("Потребуется дней: " + deliveryTime + "\n");
-        } else if (Distance >= 60 && Distance < 100) {
+        } else if (distance < 100) {
             deliveryTime += 3;
             System.out.println("Потребуется дней: " + deliveryTime + "\n");
         } else {
@@ -66,7 +66,7 @@ public class Main {
 
         //case №3
 
-        int deliveryDistance = 95;
+        int deliveryDistance = 60;
         checkDelivery(deliveryDistance);
 
     }
